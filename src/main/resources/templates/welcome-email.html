@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:remove="all">Template for HTML email</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <i class="fa fa-coffee fa-2x"></i>
+        <p>
+            Hello, <span th:text="${name}">Eddy Merckx</span>!
+        </p>
+        <p th:if="${name.length() > 10}">
+            Wow! You've got a long name (more than 10 chars)!
+        </p>
+        <p>
+            You have been successfully subscribed to the <b>Chesteric31</b> on
+            <span th:text="${subscriptionDate}">28-12-2012</span>
+        </p>
+        <p>We write on following technologies:-</p>
+        <ul th:remove="all-but-first">
+            <li th:each="tech : ${technologies}" th:text="${tech}">Java</li>
+            <li>Java</li>
+            <li>Web</li>
+        </ul>
+        <p>
+            Regards, <br/>
+            <em>Chesteric31 Team</em>
+        </p>
+        <img data-th-src="|cid:logo|" height="80" />
+
+    </body>
+</html>
