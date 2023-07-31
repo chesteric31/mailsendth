@@ -42,7 +42,7 @@ public class EmailSenderService {
         
         String html = templateEngine.process(email.template, context);
         helper.setText(html, true);
-        //WARNING addInline ager setText else no image found!
+        //WARNING addInline after setText else no image shown!
         helper.addInline("logo", new ClassPathResource("templates/images/Tux.png"), "image/png");
         logger.info("Sending email: {} with html body: {}", email, html);
         emailSender.send(message);
