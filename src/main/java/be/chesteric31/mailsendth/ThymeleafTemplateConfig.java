@@ -1,7 +1,6 @@
 package be.chesteric31.mailsendth;
 
 import java.nio.charset.StandardCharsets;
-import java.util.Collections;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

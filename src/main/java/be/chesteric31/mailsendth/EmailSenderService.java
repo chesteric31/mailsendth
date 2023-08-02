@@ -1,12 +1,8 @@
 package be.chesteric31.mailsendth;
 
-import java.nio.charset.StandardCharsets;
-
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
-import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.InputStreamSource;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
 package be.chesteric31.mailsendth;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,7 +32,7 @@ class MailsendthApplicationTests {
         email.template = "welcome-email.html";
         Map<String, Object> properties = new HashMap<>();
         properties.put("name", "Billy");
-        properties.put("subscriptionDate", LocalDate.now().toString());
+        properties.put("subscriptionDate", LocalDateTime.now());
         properties.put("technologies", Arrays.asList("Cobol", "C", "Java"));
 		//properties.put("logo", "templates/images/Tux.png");
         email.properties = properties;

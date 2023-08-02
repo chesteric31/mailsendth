@@ -15,7 +15,9 @@
         </p>
         <p>
             You have been successfully subscribed to the <b>Chesteric31</b> on
-            <span th:text="${subscriptionDate}">28-12-2012</span>
+            <!--<span th:text="${subscriptionDate}">28-12-2012</span>-->
+            <p th:text="${#temporals.format(subscriptionDate, 'dd/MMM/yyyy HH:mm')}"></p>
+
         </p>
         <p>We write on following technologies:-</p>
         <ul th:remove="all-but-first">
